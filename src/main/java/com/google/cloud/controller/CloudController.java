@@ -2,7 +2,8 @@ package com.google.cloud.controller;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.core.Response;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 import com.google.cloud.Trade;
 
@@ -11,12 +12,14 @@ public class CloudController {
 
 @GET
 @Path("/tardeDetails")
-public Response getTrade() {
+@Produces(MediaType.APPLICATION_JSON)
+public Trade getTrade() {
 	
 	Trade trade = new Trade();
 	trade.setTradeId("1");
-	trade.setTradeName("REPO");
+	trade.setTradeName("BOND");
 	trade.setTradeDetails("Bloomberg");
-	return Response.status(200).entity("Trade").build();
+	trade.setTraderName("Abhijeet Sawant");
+	return trade;
 	}
 }

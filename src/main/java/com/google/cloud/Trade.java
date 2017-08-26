@@ -4,6 +4,15 @@ public class Trade {
 	private String tradeId;
 	private String tradeName;
 	private String tradeDetails;
+	private String traderName;
+
+	public String getTraderName() {
+		return traderName;
+	}
+
+	public void setTraderName(String traderName) {
+		this.traderName = traderName;
+	}
 
 	public String getTradeId() {
 		return tradeId;
