@@ -11,7 +11,7 @@ import com.google.cloud.Trade;
 public class CloudController {
 
 @GET
-@Path("/tardeDetails")
+@Path("/tradeDetails")
 @Produces(MediaType.APPLICATION_JSON)
 public Trade getTrade() {
 	
